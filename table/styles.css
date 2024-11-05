@@ -1,0 +1,56 @@
+:root {
+    --neon-blue: #00f3ff;
+    --neon-pink: #ff00ff;
+    --neon-green: #39ff14;
+    --neon-yellow: #ffff00;
+    --neon-purple: #bf00ff;
+}
+
+body {
+    background: #0a0a1f;
+    color: white;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.score-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.score-table th,
+.score-table td {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--neon-yellow);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.score-table th {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.score-table td {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.score-table tr:hover td {
+    background-color: rgba(0, 243, 255, 0.1);
+    box-shadow: 0 0 10px var(--neon-pink);
+}
